@@ -1,6 +1,7 @@
 <h1>Official Gryt Theme for <a href="https://jellyfin.org/">Jellyfin</a></h1>
 
 <h2>Preview</h2>
+<p>Coming soon..?</p>
 <img src="" alt=""/>
 
 <h2>How To Use</h2>
