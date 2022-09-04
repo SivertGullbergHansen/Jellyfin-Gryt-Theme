@@ -22,15 +22,17 @@ progress::-moz-progress-bar {
   background: var(--accent);
   color: var(--accent);
 }
+
 progress::-webkit-progress-value {
   background: var(--accent);
   color: var(--accent);
 }
+
 progress {
   color: var(--accent);
 }
 
-.card.show-animation:focus > .cardBox {
+.card.show-animation:focus>.cardBox {
   -webkit-transform: none !important;
   transform: none !important;
 }
@@ -96,37 +98,34 @@ progress {
 .layout-tv .emby-tab-button:focus::before,
 .layout-tv .paper-icon-button-light:focus::after,
 .layout-tv .listItem:focus::after,
-.layout-tv a.show-focus[is="emby-linkbutton"]:focus > .listItem::after,
+.layout-tv a.show-focus[is="emby-linkbutton"]:focus>.listItem::after,
 .layout-tv .raised:focus::after,
 .layout-tv #itemDetailPage .emby-button:focus::after {
   transform: translateX(0) !important;
   visibility: visible;
 }
 
-.layout-tv .card:focus ~ .card::before,
-.layout-tv .emby-tab-button:focus ~ .emby-tab-button::before,
-.layout-tv .paper-icon-button-light:focus ~ .paper-icon-button-light::after,
-.layout-tv .raised:focus ~ .raised::after,
-.layout-tv #itemDetailPage .emby-button:focus ~ .emby-button::after {
+.layout-tv .card:focus~.card::before,
+.layout-tv .emby-tab-button:focus~.emby-tab-button::before,
+.layout-tv .paper-icon-button-light:focus~.paper-icon-button-light::after,
+.layout-tv .raised:focus~.raised::after,
+.layout-tv #itemDetailPage .emby-button:focus~.emby-button::after {
   transform: translateX(-100%) !important;
 }
 
-.layout-tv .verticalSection:focus-within ~ .verticalSection .card::before,
-.layout-tv .verticalSection:focus-within ~ .section5 .card::before,
-.layout-tv .listItem:focus ~ .listItem::after,
-.layout-tv
-  a.show-focus[is="emby-linkbutton"]:focus
-  ~ a.show-focus[is="emby-linkbutton"]
-  > .listItem::after,
-.layout-tv .verticalSection:focus-within ~ .verticalSection .raised::after {
+.layout-tv .verticalSection:focus-within~.verticalSection .card::before,
+.layout-tv .verticalSection:focus-within~.section5 .card::before,
+.layout-tv .listItem:focus~.listItem::after,
+.layout-tv a.show-focus[is="emby-linkbutton"]:focus~a.show-focus[is="emby-linkbutton"]>.listItem::after,
+.layout-tv .verticalSection:focus-within~.verticalSection .raised::after {
   transform: translateY(-100%);
 }
 
 .layout-tv .verticalSection:focus-within .card::before,
-.layout-tv *:focus-within > .emby-tab-button::before,
-.layout-tv *:focus-within > .paper-icon-button-light::after,
-.layout-tv *:focus-within > .raised::after,
-.layout-tv #itemDetailPage *:focus-within > .emby-button::after {
+.layout-tv *:focus-within>.emby-tab-button::before,
+.layout-tv *:focus-within>.paper-icon-button-light::after,
+.layout-tv *:focus-within>.raised::after,
+.layout-tv #itemDetailPage *:focus-within>.emby-button::after {
   transform: translateX(100%);
 }
 
@@ -187,17 +186,14 @@ fieldset.verticalSection.verticalSection-extrabottompadding {
   top: 0.9em;
 }
 
-#itemDetailPage
-  button.cardImageContainer.coveredImage.cardContent.itemAction.lazy.blurhashed.lazy-image-fadein-fast {
+#itemDetailPage button.cardImageContainer.coveredImage.cardContent.itemAction.lazy.blurhashed.lazy-image-fadein-fast {
   border-radius: var(--rounding);
 }
 
-#indexPage
-  button.cardImageContainer.cardContent.itemAction.lazy.blurhashed.lazy-image-fadein-fast,
+#indexPage button.cardImageContainer.cardContent.itemAction.lazy.blurhashed.lazy-image-fadein-fast,
 .emby-scroller button.cardImageContainer.coveredImage.cardContent,
 .childrenItemsContainer button.cardImageContainer.coveredImage.cardContent,
-.nextUpItems
-  button.cardImageContainer.cardContent.itemAction.lazy.blurhashed.lazy-image-fadein-fast,
+.nextUpItems button.cardImageContainer.cardContent.itemAction.lazy.blurhashed.lazy-image-fadein-fast,
 .vertical-wrap button.cardImageContainer.coveredImage.cardContent,
 .emby-scroller button.cardImageContainer {
   border-radius: var(--rounding) var(--rounding) 0 0 !important;
@@ -233,11 +229,9 @@ span.material-icons.checkboxIcon.checkboxIcon-checked.check {
 }
 
 .skinHeader-withBackground.osdHeader {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.75),
-    transparent
-  ) !important;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.75),
+      transparent) !important;
   color: #eee;
   height: 7.5em;
   pointer-events: none;
@@ -248,19 +242,19 @@ span.material-icons.checkboxIcon.checkboxIcon-checked.check {
 
 .osdControls .flex.flex-direction-row.align-items-center {
   display: grid;
-  grid-template-areas: "one two" "three three";
+  grid-template-areas: "one two""three three";
 }
 
-.osdControls .flex.flex-direction-row.align-items-center > :nth-child(1) {
+.osdControls .flex.flex-direction-row.align-items-center> :nth-child(1) {
   grid-area: one;
   justify-self: flex-start;
 }
 
-.osdControls .flex.flex-direction-row.align-items-center > :nth-child(2) {
+.osdControls .flex.flex-direction-row.align-items-center> :nth-child(2) {
   grid-area: three;
 }
 
-.osdControls .flex.flex-direction-row.align-items-center > :nth-child(3) {
+.osdControls .flex.flex-direction-row.align-items-center> :nth-child(3) {
   grid-area: two;
   justify-self: flex-end;
   padding-right: 0.5em;
@@ -323,6 +317,7 @@ div#itemBackdrop {
 div#itemBackdrop::after {
   display: none;
 }
+
 .detailPageSecondaryContainer {
   background: transparent;
   margin: 0 !important;
@@ -338,26 +333,26 @@ div#itemBackdrop::after {
   padding: 0 !important;
   position: relative;
   text-shadow: 1px 1px 5px #141414;
-  width: 60vw;
 }
 
 .layout-mobile .infoWrapper {
   padding-left: 3%;
 }
-.layout-mobile
-  .detailPagePrimaryContainer.padded-left.padded-right.detailRibbon {
+
+.layout-mobile .detailPagePrimaryContainer.padded-left.padded-right.detailRibbon {
   align-content: flex-end;
   font-size: 180%;
   justify-content: flex-start;
   margin-top: 65vh !important;
 }
+
 .layout-mobile .detailPageSecondaryContainer {
   margin: 0;
   margin-top: -65vh !important;
 }
+
 .layout-mobile div#itemBackdrop {
   width: 100vw;
-  -webkit-mask-image: linear-gradient(to top, transparent, #000000e8);
   margin-top: 0vh;
   transition: 300ms;
   background-position-x: 75%;
@@ -426,8 +421,7 @@ div#itemBackdrop::after {
 }
 
 @media (orientation: landscape) {
-  .layout-mobile
-    .detailPagePrimaryContainer.padded-left.padded-right.detailRibbon {
+  .layout-mobile .detailPagePrimaryContainer.padded-left.padded-right.detailRibbon {
     flex-flow: row;
     width: 100% !important;
   }
@@ -448,12 +442,10 @@ div#itemBackdrop::after {
     font-size: 6.5vh;
   }
 
-  .layout-mobile .primaryImageWrapper > img {
-    -webkit-mask-image: linear-gradient(
-      0deg,
-      transparent 0%,
-      black 90%
-    ) !important;
+  .layout-mobile .primaryImageWrapper>img {
+    -webkit-mask-image: linear-gradient(0deg,
+        transparent 0%,
+        black 90%) !important;
     mask-image: linear-gradient(0deg, transparent 0%, black 90%) !important;
   }
 }
@@ -663,7 +655,7 @@ div#itemBackdrop::after {
   width: calc(50% - 5px);
 }
 
-.layout-mobile .primaryImageWrapper > img {
+.layout-mobile .primaryImageWrapper>img {
   -o-object-fit: cover;
   -webkit-filter: brightness(65%);
   -webkit-mask-image: linear-gradient(0deg, transparent 15%, black 90%);
@@ -684,14 +676,13 @@ div#itemBackdrop::after {
   display: none;
 }
 
-.layout-mobile
-  .detailPagePrimaryContainer.padded-left.padded-right.detailRibbon {
+.layout-mobile .detailPagePrimaryContainer.padded-left.padded-right.detailRibbon {
   align-content: flex-end;
   font-size: 180%;
   justify-content: flex-start;
 }
 
-.cardText > .textActionButton {
+.cardText>.textActionButton {
   height: 100% !important;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -988,7 +979,7 @@ div[data-role="controlgroup"] a[data-role="button"]:last-child {
   border-top-right-radius: var(--rounding);
 }
 
-.itemsContainer > .card > .cardBox {
+.itemsContainer>.card>.cardBox {
   margin: 0 !important;
 }
 
@@ -996,11 +987,11 @@ div[data-role="controlgroup"] a[data-role="button"]:last-child {
   box-shadow: 0 0 #000 !important;
 }
 
-div:not(.sectionTitleContainer-cards) > .sectionTitle-cards {
+div:not(.sectionTitleContainer-cards)>.sectionTitle-cards {
   padding-top: 1em !important;
 }
 
-div:not(.sectionTitleContainer-cards) > .sectionTitle-cards {
+div:not(.sectionTitleContainer-cards)>.sectionTitle-cards {
   font-size: revert !important;
 }
 
@@ -1128,6 +1119,7 @@ label.selectLabel {
 }
 
 @media (min-width: 31.25em) {
+
   .portraitCard,
   .smallBackdropCard,
   .squareCard {
@@ -1136,6 +1128,7 @@ label.selectLabel {
 }
 
 @media (min-width: 43.75em) {
+
   .portraitCard,
   .squareCard {
     width: calc(25% - 10px);
@@ -1143,6 +1136,7 @@ label.selectLabel {
 }
 
 @media (min-width: 50em) {
+
   .portraitCard,
   .squareCard {
     width: calc(20% - 10px);
@@ -1150,6 +1144,7 @@ label.selectLabel {
 }
 
 @media (min-width: 75em) {
+
   .portraitCard,
   .squareCard {
     width: calc(16.666666666666668% - 10px);
@@ -1157,6 +1152,7 @@ label.selectLabel {
 }
 
 @media (min-width: 87.5em) {
+
   .portraitCard,
   .smallBackdropCard,
   .squareCard {
@@ -1165,6 +1161,7 @@ label.selectLabel {
 }
 
 @media (min-width: 100em) {
+
   .portraitCard,
   .squareCard {
     width: calc(12.5% - 10px);
@@ -1172,6 +1169,7 @@ label.selectLabel {
 }
 
 @media (min-width: 120em) {
+
   .portraitCard,
   .squareCard {
     width: calc(11.11111111111111% - 10px);
@@ -1179,6 +1177,7 @@ label.selectLabel {
 }
 
 @media (min-width: 131.25em) {
+
   .portraitCard,
   .squareCard {
     width: calc(10% - 10px);
@@ -1408,6 +1407,7 @@ div#divRunningTasks {
 .layout-tv #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer,
 .layout-desktop #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer {
   background: transparent;
+  display: grid;
   font-size: 20px;
   font-size: 135%;
   height: 20vh;
@@ -1665,12 +1665,10 @@ h2 {
   transform: none !important;
 }
 
-body:not(.withSectionTabs) > .skinHeader {
-  background: linear-gradient(
-    to bottom,
-    rgba(20, 20, 20),
-    transparent
-  ) !important;
+body:not(.withSectionTabs)>.skinHeader {
+  background: linear-gradient(to bottom,
+      rgba(20, 20, 20),
+      transparent) !important;
   transform: none !important;
 }
 
@@ -1801,8 +1799,7 @@ body:not(.withSectionTabs) > .skinHeader {
   display: block !important;
 }
 
-.listItem-withContentWrapper:hover
-  .listItemImageButton.itemAction.paper-icon-button-light {
+.listItem-withContentWrapper:hover .listItemImageButton.itemAction.paper-icon-button-light {
   opacity: 100%;
 }
 
@@ -1872,13 +1869,10 @@ div:not(.paperList) .listItem {
 }
 
 .listItemImage.listItemImage-large::after {
-  background-image: -moz-
-    oldlinear-gradient(bottom, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0) 95%);
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8) 5%,
-    rgba(0, 0, 0, 0) 95%
-  );
+  background-image: -moz- oldlinear-gradient(bottom, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0) 95%);
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0) 95%);
   bottom: 0;
   content: "";
   height: 55px;
@@ -1925,7 +1919,7 @@ div:not(.paperList) .listItem {
   padding: 0 10px;
 }
 
-.layout-mobile .itemsContainer > :last-child {
+.layout-mobile .itemsContainer> :last-child {
   padding-right: 10px !important;
 }
 
@@ -2041,7 +2035,7 @@ div:not(.paperList) .listItem {
   display: grid;
   grid-auto-columns: 1fr;
   grid-gap: 30px;
-  grid-template-areas: "one one two" " three three three";
+  grid-template-areas: "one one two"" three three three";
 }
 
 .dashboardColumn:nth-child(1) {
@@ -2075,7 +2069,7 @@ div:not(.paperList) .listItem {
   padding: 0 !important;
 }
 
-div:not(.sectionTitleContainer-cards) > .sectionTitle-cards {
+div:not(.sectionTitleContainer-cards)>.sectionTitle-cards {
   font-size: 1em;
 }
 
@@ -2097,17 +2091,17 @@ div:not(.sectionTitleContainer-cards) > .sectionTitle-cards {
   width: 100%;
 }
 
-.chapterCard .innerCardFooter > .cardText:first-child {
+.chapterCard .innerCardFooter>.cardText:first-child {
   float: left;
 }
 
-.chapterCard .innerCardFooter > .cardText:last-child {
+.chapterCard .innerCardFooter>.cardText:last-child {
   float: right;
 }
 
 #itemDetailPage .detailLogo {
   background-position: 0 !important;
-  display: block !important;
+  display: block;
   flex-shrink: 0;
   height: 20vh;
   margin-left: 5vw;
@@ -2131,11 +2125,11 @@ div#itemDetailPage {
   margin-top: 0 !important;
 }
 
-.hide + .detailPageWrapperContainer .detailPagePrimaryContent {
+.hide+.detailPageWrapperContainer .detailPagePrimaryContent {
   min-height: 65vh !important;
 }
 
-.hide + .detailPageWrapperContainer .detailRibbon {
+.hide+.detailPageWrapperContainer .detailRibbon {
   background: transparent;
   font-size: 135% !important;
   height: 25vh !important;
@@ -2151,15 +2145,14 @@ div#itemDetailPage {
 
 .layout-desktop #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer,
 .layout-tv #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer {
-  height: 10vh;
   margin: 0;
   padding: 0;
 }
 
-:not(.hide) + .detailPageWrapperContainer .parentName,
-:not(.hide) + .detailPageWrapperContainer .parentNameLast,
-:not(.hide) + .detailPageWrapperContainer .parentName > *,
-:not(.hide) + .detailPageWrapperContainer .parentNameLast > * {
+:not(.hide)+.detailPageWrapperContainer .parentName,
+:not(.hide)+.detailPageWrapperContainer .parentNameLast,
+:not(.hide)+.detailPageWrapperContainer .parentName>*,
+:not(.hide)+.detailPageWrapperContainer .parentNameLast>* {
   background: transparent;
   display: block;
   font-size: 0;
@@ -2170,10 +2163,10 @@ div#itemDetailPage {
   width: 35vw;
 }
 
-.layout-desktop :not(.hide) + .detailPageWrapperContainer .parentName,
-.layout-desktop :not(.hide) + .detailPageWrapperContainer .parentNameLast,
-.layout-desktop :not(.hide) + .detailPageWrapperContainer .parentName > *,
-.layout-desktop :not(.hide) + .detailPageWrapperContainer .parentNameLast > * {
+.layout-desktop :not(.hide)+.detailPageWrapperContainer .parentName,
+.layout-desktop :not(.hide)+.detailPageWrapperContainer .parentNameLast,
+.layout-desktop :not(.hide)+.detailPageWrapperContainer .parentName>*,
+.layout-desktop :not(.hide)+.detailPageWrapperContainer .parentNameLast>* {
   background: transparent;
   display: block;
   font-size: 0;
@@ -2184,10 +2177,10 @@ div#itemDetailPage {
   width: 35vw;
 }
 
-.layout-tv :not(.hide) + .detailPageWrapperContainer .parentName,
-.layout-tv :not(.hide) + .detailPageWrapperContainer .parentNameLast,
-.layout-tv :not(.hide) + .detailPageWrapperContainer .parentName > *,
-.layout-tv :not(.hide) + .detailPageWrapperContainer .parentNameLast > * {
+.layout-tv :not(.hide)+.detailPageWrapperContainer .parentName,
+.layout-tv :not(.hide)+.detailPageWrapperContainer .parentNameLast,
+.layout-tv :not(.hide)+.detailPageWrapperContainer .parentName>*,
+.layout-tv :not(.hide)+.detailPageWrapperContainer .parentNameLast>* {
   background: transparent;
   height: 20vh;
   top: 10vh;
@@ -2203,8 +2196,8 @@ div#itemDetailPage {
   display: block;
 }
 
-.hide + .detailPageWrapperContainer .parentName,
-.hide + .detailPageWrapperContainer .parentNameLast {
+.hide+.detailPageWrapperContainer .parentName,
+.hide+.detailPageWrapperContainer .parentNameLast {
   display: block !important;
 }
 
@@ -2212,7 +2205,7 @@ div#itemDetailPage {
   margin: 0.5em 0 !important;
 }
 
-.cardText > .textActionButton {
+.cardText>.textActionButton {
   font-size: 1em;
 }
 
@@ -2253,8 +2246,7 @@ div#itemDetailPage {
   margin-top: -30%;
 }
 
-.layout-desktop
-  .childrenItemsContainer.itemsContainer.padded-right.vertical-list {
+.layout-desktop .childrenItemsContainer.itemsContainer.padded-right.vertical-list {
   margin-top: -25em !important;
 }
 
@@ -2302,7 +2294,6 @@ div#itemDetailPage {
 
 .layout-desktop .trackSelections {
   font-size: small !important;
-  max-width: 27em !important;
 }
 
 .itemTags {
@@ -2380,10 +2371,11 @@ div#itemDetailPage {
 .layout-desktop .detailSection {
   background-color: #000000de;
   border-radius: 8px;
-  margin-left: -30vw;
-  margin-top: -10vh;
-  padding: 10vh 2vw 2vh 30vw;
+  /* margin-left: -30vw; */
+  /* margin-top: -10vh; */
+  padding: 32px;
   width: fit-content;
+  max-width: 640px;
 }
 
 .progressring-spiner {
@@ -2443,9 +2435,11 @@ div#itemDetailPage {
   margin-top: -12vh;
   margin-left: 26vw;
 }
-.itemsContainer-tv > .portraitCard {
+
+.itemsContainer-tv>.portraitCard {
   width: calc(12.5% - 10px) !important;
 }
+
 .layout-tv .itemDetailsGroup {
   font-size: 1vw;
   margin-top: -5vh;
@@ -2489,12 +2483,11 @@ div#itemDetailPage {
   margin-right: -100vw !important;
 }
 
-.layout-tv .itemsContainer-tv > .overflowBackdropCard {
+.layout-tv .itemsContainer-tv>.overflowBackdropCard {
   width: 18.5vw;
 }
 
-.layout-desktop
-  .childrenItemsContainer.itemsContainer.padded-right.vertical-list {
+.layout-desktop .childrenItemsContainer.itemsContainer.padded-right.vertical-list {
   margin-top: -5em !important;
 }
 
@@ -2515,7 +2508,7 @@ div#itemDetailPage {
   font-size: 81%;
 }
 
-.layout-mobile .hide + .detailPageWrapperContainer .detailPagePrimaryContent {
+.layout-mobile .hide+.detailPageWrapperContainer .detailPagePrimaryContent {
   min-height: 6vh !important;
 }
 
@@ -2552,14 +2545,14 @@ div#itemDetailPage {
   width: 50%;
 }
 
-.layout-mobile .primaryImageWrapper > img {
+.layout-mobile .primaryImageWrapper>img {
   display: none !important;
   z-index: -3;
 }
 
 .layout-mobile #itemDetailPage .detailLogo {
   display: block !important;
-  margin-bottom: -50% !important;
+  margin-bottom: -30% !important;
   margin-top: 11%;
   min-width: 80% !important;
   z-index: 5 !important;
@@ -2666,20 +2659,16 @@ div#castCollapsible {
 }
 
 .layout-desktop div#castCollapsible {
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 92%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  -webkit-mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 1) 92%,
+      rgba(0, 0, 0, 0) 100%);
   overflow-x: clip;
 }
 
 .layout-tv div#castCollapsible {
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 92%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  -webkit-mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 1) 92%,
+      rgba(0, 0, 0, 0) 100%);
   margin-bottom: 6em;
   overflow-x: clip;
 }
@@ -2704,7 +2693,6 @@ div#castCollapsible {
 }
 
 .layout-tv .trackSelections {
-  max-width: 29em;
   font-size: 1.3vh !important;
 }
 
@@ -2719,8 +2707,10 @@ div#castCollapsible {
 
 .layout-desktop .trackSelections {
   font-size: small !important;
-  margin-left: 50vh;
-  max-width: 27em !important;
+
+  display: grid;
+  gap: 12px;
+  margin-bottom: 32px;
 }
 
 .writersGroup {
@@ -2732,7 +2722,7 @@ div#castCollapsible {
 }
 
 .layout-desktop .trackSelections .selectContainer .selectLabel {
-  margin: 0 -1.5em 0 0;
+  margin-right: 24px;
 }
 
 .detailsGroupItem .label,
@@ -2785,9 +2775,7 @@ span.material-icons.detailButton-icon.play_arrow {
   width: 80vw !important;
 }
 
-.nextUpItems
-  .card.overflowBackdropCard.card-hoverable.card-withuserdata
-  :not(.layout-mobile) {
+.nextUpItems .card.overflowBackdropCard.card-hoverable.card-withuserdata :not(.layout-mobile) {
   width: 18vw;
 }
 
