@@ -307,8 +307,10 @@ div#itemBackdrop {
   background-attachment: scroll;
   mask-image: linear-gradient(to right, transparent, black),
     linear-gradient(to top, transparent, black);
-  -webkit-mask-image: linear-gradient(to right, transparent, black),
-    linear-gradient(to top, transparent, black);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%),
+    linear-gradient(to left, transparent 0%, black 35%),
+    linear-gradient(to bottom, transparent 0%, black 35%),
+    linear-gradient(to top, transparent 0%, black 35%);
   mask-composite: source-in;
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
